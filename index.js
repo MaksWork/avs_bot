@@ -11,8 +11,8 @@ const ProductsController = require('./db/controllers/ProductsController');
 
 const app = express();
 
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
 app.use('/static', express.static('public'))
 
 
@@ -97,12 +97,15 @@ app.post('/createUser', (req, res) =>{
         return res.status(500)
     }
 })
+app.get('/test', async (req, res) => {
+    const products = [{id : 1, title: 'Blueberry grape', ml: 30, mg: 20, price: 10, img_flag: 'bg_liquid', type: 'liquid'},]
+    res.send(products)
+})
 
 app.get('/getAllLiquids', async (req, res) =>{
     try {
         //const products = await ProductsController.getAllLiquids()
         const products = [{id : 1, title: 'Blueberry grape', ml: 30, mg: 20, price: 10, img_flag: 'bg_liquid', type: 'liquid'},]
-        console.log('works');
         res.send(products)
     } catch (error) {
         console.log(error);

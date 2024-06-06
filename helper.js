@@ -11,7 +11,7 @@ module.exports = {
         start_option : {
             reply_markup : {
                 inline_keyboard :[
-                    [{text: 'Start', web_app: {url: 'http://94.231.205.79:5173'}}],
+                    [{text: 'Start', web_app: {url: 'https://avsbot.netlify.app'}}],
                 ]
             }
         }
