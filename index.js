@@ -99,13 +99,13 @@ app.post('/createUser', (req, res) =>{
 })
 app.get('/test', async (req, res) => {
     const products = [{id : 1, title: 'Blueberry grape', ml: 30, mg: 20, price: 10, img_flag: 'bg_liquid', type: 'liquid'},]
+    console.log('test work');
     res.send(products)
 })
 
 app.get('/getAllLiquids', async (req, res) =>{
     try {
-        //const products = await ProductsController.getAllLiquids()
-        const products = [{id : 1, title: 'Blueberry grape', ml: 30, mg: 20, price: 10, img_flag: 'bg_liquid', type: 'liquid'},]
+        const products = await ProductsController.getAllLiquids()
         res.send(products)
     } catch (error) {
         console.log(error);
