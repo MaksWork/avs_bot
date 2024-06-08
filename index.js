@@ -106,6 +106,7 @@ app.get('/test', async (req, res) => {
 app.get('/getAllLiquids', async (req, res) =>{
     try {
         const products = await ProductsController.getAllLiquids()
+        console.log(products);
         res.send(products)
     } catch (error) {
         console.log(error);
