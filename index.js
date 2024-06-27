@@ -3,7 +3,7 @@ const TelegramApi = require('node-telegram-bot-api');
 const {app} = require('./server/index.js')
 const { startText, options, switchRegion } = require('./helper');
 
-app.listen(process.env.API_PORT, () =>{ console.log('server starts on port : ' + process.env.API_PORT)})
+app.listen(process.env.APP_PORT, () =>{ console.log('server starts on port : ' + process.env.API_PORT)})
 
 const bot_token = process.env.BOT_TOKEN;
 
